@@ -53,7 +53,7 @@
     </section>
     <!--Dialog modal Section..........................................................................-->
     <div class="ts modals dimmer">
-        <dialog class="ts basic closable fullscreen modal" id="basicModal" open>
+        <dialog id="loginModal" class="ts basic closable modal" open>
             <i class="close icon"></i>
             <div class="ts icon header">
                 <i class="bomb icon"></i>
@@ -88,7 +88,7 @@
     <script>
     //Triggle 卡片 用藥資訊
     ts(".card").on("click", function() {
-        ts('#basicModal').modal("show");
+        ts('#loginModal').modal("show");
     });
     </script>
 </body>
