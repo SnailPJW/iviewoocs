@@ -50,7 +50,24 @@
                     </a>
                 </article>
     </section>
-    <!--Section..........................................................................-->
+    <!--Dialog modal Section..........................................................................-->
+    <dialog class="ts basic fullscreen modal" open>
+        <div class="ts icon header">
+            <i class="bomb icon"></i>
+            請選擇!!!
+        </div>
+        <div class="content">
+            <p>較不符合合理使用之原則。</p>
+        </div>
+        <div class="actions">
+            <button class="ts inverted basic deny button">
+                不
+            </button>
+            <button class="ts inverted basic positive button">
+                是的
+            </button>
+        </div>
+    </dialog>
     <!--Footer ..........................................................................-->
         <footer class="ts very padded horizontally fitted fluid secondary segment">
             <div class="ts narrow container">
@@ -64,5 +81,11 @@
         </footer>
         </div>
     </main>
+    <script>
+    //Triggle 卡片 用藥資訊
+    ts(".card").on("click", function() {
+        ts('#basicModal').modal("show");
+    });
+    </script>
 </body>
 </html>
