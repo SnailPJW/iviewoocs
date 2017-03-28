@@ -31,7 +31,7 @@
     <!--Section..........................................................................-->
     <section class="ts narrow container">
                 <article class="ts doubling four link cards">
-                    <a class="ts card">
+                    <a id="loginCard"class="ts card">
                         <div class="content">
                             <div class="header">登入</div>
                             <div class="meta">
@@ -40,7 +40,7 @@
                         </div>
                         <div class="symbol"><i class="icon sign in"></i></div>
                     </a>
-                    <a class="ts card">
+                    <a id="wisherCard" class="ts card">
                         <div class="content">
                             <div class="header">許願牆</div>
                             <div class="meta">
@@ -76,7 +76,7 @@
     </div>
     <!--Dialog 許願牆 modal Section..........................................................................-->
     <div class="ts modals dimmer">
-        <dialog id="WisherModal" class="ts basic closable mini modal" open>
+        <dialog id="wisherModal" class="ts basic closable mini modal" open>
             <i class="close icon"></i>
             <div class="ts icon header">
                 <i class="bomb icon"></i>
@@ -111,9 +111,18 @@
         </div>
     </main>
     <script>
-    //Triggle 卡片 用藥資訊
+    //Triggle 登入卡片 資訊
     ts(".card").on("click", function() {
-        ts('#loginModal').modal("show");
+        switch(this.id)
+        {
+            case 'loginCard':
+                ts('#loginModal').modal("show");
+                break;
+            case 'wisherCard':
+                ts('#wisherModal').modal("show");
+                break;
+        }
+        
     });
     </script>
 </body>
